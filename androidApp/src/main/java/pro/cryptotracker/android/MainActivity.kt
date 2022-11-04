@@ -69,9 +69,6 @@ fun MyApplicationTheme(
 
 class MainActivity : ComponentActivity() {
 
-
-    val assetsApi : AssetsApi by inject()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
