@@ -93,6 +93,6 @@ fun Greeting(text: String) {
 @Composable
 fun DefaultPreview() {
     MyApplicationTheme {
-        Greeting("Hello, Android!")
+
     }
 }
