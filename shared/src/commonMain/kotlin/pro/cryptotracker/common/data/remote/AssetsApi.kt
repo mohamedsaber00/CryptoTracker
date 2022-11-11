@@ -18,7 +18,7 @@ import kotlinx.serialization.json.Json
 import org.koin.core.component.KoinComponent
 import pro.cryptotracker.common.Util.ASSETS_PARAM
 import pro.cryptotracker.common.Util.BASE_URL
-import pro.cryptotracker.common.data.model.AssetsResponse
+import pro.cryptotracker.common.data.remote.model.AssetsResponse
 
 class AssetsApi(
     private val client: HttpClient,

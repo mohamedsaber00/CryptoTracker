@@ -17,6 +17,7 @@ import io.ktor.client.utils.buildHeaders
 import io.ktor.http.Headers
 import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
+import io.realm.kotlin.Realm
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -40,8 +41,9 @@ fun initKoin(enableNetworkLogs: Boolean = false, appDeclaration: KoinAppDeclarat
 fun appModule(enableNetworkLogs: Boolean) = module {
     single { createJson() }
     single { createHttpClient(get(), enableNetworkLogs = enableNetworkLogs) }
-
+    single { Realm.open(get()) }
     single { CoroutineScope(Dispatchers.Default + SupervisorJob() ) }
+    single { AssetsApi(get()) }
     single { AssetsApi(get()) }
 }
 
@@ -56,6 +58,7 @@ fun createHttpClient(json: Json, enableNetworkLogs: Boolean) = HttpClient {
     defaultRequest {
         url(BASE_URL)
         headers {
+            //TODO ENABLE API KEY
        //     append(HttpHeaders.Authorization, "Bearer $API_KEY")
 
         }
