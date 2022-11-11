@@ -1,9 +1,13 @@
+import Versions.kmpNativeCoroutinesVersion
+
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
     kotlin("plugin.serialization") version "1.7.20"
     id("io.realm.kotlin")
+    id("com.rickclephas.kmp.nativecoroutines")
+
 }
 
 kotlin {

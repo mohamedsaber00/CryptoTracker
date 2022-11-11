@@ -11,7 +11,7 @@ object Versions {
     
     const val kotlinxHtmlJs = "0.7.3"
 
-    const val kmpNativeCoroutinesVersion = "0.13.0"
+    const val kmpNativeCoroutinesVersion = "0.13.1"
 
     const val compose = "1.3.0-beta03"
     const val composeCompiler = "1.3.1"
@@ -30,7 +30,7 @@ object Versions {
     const val mockito = "3.11.2"
     const val robolectric = "4.6.1"
 
-    const val realm = "1.2.0"
+    const val realm = "1.4.0"
     const val shadow = "7.0.0"
     const val kotlinterGradle = "3.4.5"
 
