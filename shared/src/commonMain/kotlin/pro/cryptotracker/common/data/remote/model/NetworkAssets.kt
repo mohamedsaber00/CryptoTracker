@@ -1,12 +1,16 @@
-package pro.cryptotracker.common.data.model
+package pro.cryptotracker.common.data.remote.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 
+/*
+* The Network & UI representation of Assets
+* TODO : Separate the UI representation to a different class
+* */
 @Serializable
-data class Asset(
-    var id: String,
+data class NetworkAssets(
+    var id: String?,
     var rank: String?,
     var symbol: String?,
     var name: String?,
@@ -21,7 +25,7 @@ data class Asset(
 
 @Serializable
 data class AssetsResponse(
-   @SerialName("data") val assetsList : List<Asset>
+   @SerialName("data") val assetsList : List<NetworkAssets>
 )
 
 
